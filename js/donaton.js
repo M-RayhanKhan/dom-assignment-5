@@ -2,7 +2,7 @@ document.querySelector('#donation-now-btn').addEventListener('click', function (
 
     const inputDonate = getInputElementById('input-value');
 
-    if (isNaN(inputDonate) || inputDonate < 0) {
+    if (isNaN(inputDonate) || inputDonate <= 0) {
         alert('invalid Donation Amount')
         return document.getElementById('input-value').value = ''
     } else {
@@ -25,23 +25,20 @@ document.querySelector('#donation-now-btn').addEventListener('click', function (
     const noakhaliText = document.getElementById('noakhali-text').innerText;
     console.log(noakhaliText);
     const div = document.createElement('div');
-    div.className = 'p-6 box-border border rounded-md mb-4';
+    div.className = 'p-6 box-border border rounded-lg mb-4';
     div.innerHTML = `
-    <h3 class="font-bold">${totalAmount} ${noakhaliText}</h3>
+    <h3 class="font-bold">${totalAmount} Taka is ${noakhaliText}</h3>
     <p class='text-gray-500 mt-1'>Date: ${new Date().toDateString()} ${new Date().toTimeString()}</p>
     `
     const historyDonation = document.getElementById('history-donation');
-    historyDonation.appendChild(div)
+    historyDonation.insertBefore(div, historyDonation.firstChild)
 })
-
 
 // history Tab
 const donationTabBtn = document.getElementById('donation-tab-btn');
 const historyTabBtn = document.getElementById('history-tab-btn');
 historyTabBtn.addEventListener('click', function () {
-    // bg-[#B4F461] font-bold rounded-lg text-[17px]
-    // history btn
-    //  border-gray-500 border-opacity-30 border-2 box-border
+  
     historyTabBtn.classList.add(
         'bg-[#B4F461]'
     )
@@ -96,9 +93,9 @@ document.querySelector('#donation-now-btn-feni').addEventListener('click', funct
 
     const inputDonate = getInputElementById('input-value-feni');
 
-    if (isNaN(inputDonate) || inputDonate < 0) {
+    if (isNaN(inputDonate) || inputDonate <= 0) {
         alert('invalid Donation Amount')
-        return document.getElementById('input-value').value = ''
+        return document.getElementById('input-value-feni').value = ''
     } else {
 
         my_modal_1.showModal()
@@ -118,11 +115,47 @@ document.querySelector('#donation-now-btn-feni').addEventListener('click', funct
     // History 
     const feniText = document.getElementById('feni-text').innerText;
     const div = document.createElement('div');
-    div.className = 'p-6 box-border border rounded-md mb-4';
+    div.className = 'p-6 box-border border rounded-lg mb-4';
     div.innerHTML = `
-    <h3 class="font-bold">${totalAmount} ${feniText}</h3>
+    <h3 class="font-bold">${totalAmount} Taka is ${feniText}</h3>
     <p class='text-gray-500 mt-1'>Date: ${new Date().toDateString()} ${new Date().toTimeString()}</p>
     `
     const historyDonation = document.getElementById('history-donation');
-    historyDonation.appendChild(div)
+    historyDonation.insertBefore(div, historyDonation.firstChild)
+})
+
+// quota 
+document.querySelector('#donation-now-btn-quota').addEventListener('click', function () {
+
+    const inputDonate = getInputElementById('input-value-quota');
+
+    if (isNaN(inputDonate) || inputDonate <= 0) {
+        alert('invalid Donation Amount')
+        return document.getElementById('input-value-quota').value = ''
+    } else {
+
+        my_modal_1.showModal()
+
+    }
+
+    const donateAmount = getInnerTextElementById('add-donation-quota');
+    let totalAmount = donateAmount + inputDonate
+    document.getElementById('add-donation-quota').innerText = totalAmount
+    document.getElementById('input-value-quota').value = ''
+
+    // main  balance minus
+    const balance = getInnerTextElementById('balance');
+    const remainingBalance = balance - totalAmount;
+    document.getElementById('balance').innerText = remainingBalance
+
+    // History 
+    const quotaText = document.getElementById('quota-text').innerText;
+    const div = document.createElement('div');
+    div.className = 'p-6 box-border border rounded-lg mb-4';
+    div.innerHTML = `
+    <h3 class="font-bold">${totalAmount} Taka is ${quotaText}</h3>
+    <p class='text-gray-500 mt-1'>Date: ${new Date().toDateString()} ${new Date().toTimeString()}</p>
+    `
+    const historyDonation = document.getElementById('history-donation');
+    historyDonation.insertBefore(div, historyDonation.firstChild)
 })

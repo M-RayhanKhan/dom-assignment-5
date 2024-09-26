@@ -17,9 +17,9 @@
         <!-- bg-[#F9F7F3] -->
         <!-- navbar start here -->
         <div class="bg-gray-300 bg-opacity-30 bg-blend-overlay fixed w-full">
-            <div class="bg-[#d89818] py-4">
+            <div class="bg-[#f9f7f3] py-4">
                 <div class="flex items-center justify-between w-10/12 mx-auto">
-                    <button class="px-5 py-2 bg-[#B4F461] text-black rounded-lg font-bold">Blog</button>
+                    <a href="./blog.html"><button class="px-5 py-2 bg-[#B4F461] text-black rounded-lg font-bold">Blog</button></a>
                     <div class="flex items-center gap-3">
                         <img class="w-8" src="./assets/logo.png" alt="">
                         <h3 class="hidden sm:flex text-[18px] font-bold">Donate Bangladesh</h3>
@@ -48,15 +48,16 @@
     <main class="lg:w-10/12 mx-auto px-2 lg:px-0">
         <!-- Donation Noakhali card -->
         <!-- card section -->
-        <section class="pt-52 mb-10">
+        <section class="pt-52">
          <div id="donation-container" class="">
-            <div class="flex flex-col lg:flex-row gap-5 mb-5 border p-6">
+            <!-- donation card 1 noakhali -->
+            <div class="flex shadow-xl flex-col rounded-md lg:flex-row gap-5 mb-5 border p-6">
                 <div class="lg:w-1/2">
                     <img class="w-full" src="./assets/noakhali.png" alt="">
                 </div>
                 <div class="lg:w-1/2 space-y-5">
                     <button
-                        class="px-4 rounded-md flex gap-2 text-gray-500 font-semibold items-center py-2 bg-[#ebe2e2]">
+                        class="px-4 rounded-md flex gap-2 text-gray-500 font-semibold items-center py-2 bg-[#ecf0f3]">
                         <img src="./assets/coin.png" alt="">
                         <span id="add-donation">0</span>
                         <span>BDT</span>
@@ -80,14 +81,14 @@
                     </div>
                 </div>
             </div>
-            <!-- donation card 2 -->
-            <div class="flex flex-col lg:flex-row gap-5 mb-5 border p-6">
+            <!-- donation card 2 feni-->
+            <div class="flex shadow-xl flex-col lg:flex-row gap-5 rounded-md mb-5 border p-6">
                 <div class="lg:w-1/2">
                     <img class="w-full" src="./assets/feni.png" alt="">
                 </div>
                 <div class="lg:w-1/2 space-y-5">
                     <button
-                        class="px-4 rounded-md flex gap-2 text-gray-500 font-semibold items-center py-2 bg-[#ebe2e2]">
+                        class="px-4 rounded-md flex gap-2 text-gray-500 font-semibold items-center py-2 bg-[#ecf0f3]">
                         <img src="./assets/coin.png" alt="">
                         <span id="add-donation-feni">0</span>
                         <span>BDT</span>
@@ -103,6 +104,34 @@
                     <div class="flex items-end">
                         <!-- donate now btn -->
                         <button id="donation-now-btn-feni"
+                            class="px-7  py-3 bg-[#B4F461] font-bold rounded-lg text-[17px] w-full">Donation
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- donation card 3 quota-->
+            <div class="flex shadow-xl flex-col lg:flex-row gap-5 rounded-md mb-5 border p-6">
+                <div class="lg:w-1/2">
+                    <img class="w-full" src="./assets/quota-protest.png" alt="">
+                </div>
+                <div class="lg:w-1/2 space-y-5">
+                    <button
+                        class="px-4 rounded-md flex gap-2 text-gray-500 font-semibold items-center py-2 bg-[#ecf0f3]">
+                        <img src="./assets/coin.png" alt="">
+                        <span id="add-donation-quota">0</span>
+                        <span>BDT</span>
+                    </button>
+                    <h3 id="quota-text" class="text-[20px] font-bold">Aid for Injured in the Quota Movement</h3>
+                    <p class="text-gray-500">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                    <!-- input field -->
+                    <div>
+                        <input id="input-value-quota" type="text" name="" placeholder="Write Donation Amount"
+                            class="py-4 px-6 outline-none border rounded-lg w-full">
+
+                    </div>
+                    <div class="flex items-end">
+                        <!-- donate now btn -->
+                        <button id="donation-now-btn-quota"
                             class="px-7  py-3 bg-[#B4F461] font-bold rounded-lg text-[17px] w-full">Donation
                             Now</button>
                     </div>
