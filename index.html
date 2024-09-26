@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Assignment 5</title>
+    <!-- daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tailwind.config.js">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- bg-[#F9F7F3] -->
+        <!-- navbar start here -->
+      <div class="bg-gray-300 bg-opacity-30 bg-blend-overlay fixed w-full">
+        <div class="bg-[#d89818] py-4">
+            <div class="flex items-center justify-between w-[90%] mx-auto">
+                <button class="px-5 py-2 bg-[#B4F461] text-black rounded-lg font-bold">Blog</button>
+                <div class="flex items-center gap-3">
+                    <img class="w-8" src="./assets/logo.png" alt="">
+                    <h3 class="hidden sm:flex text-[18px] font-bold">Donate Bangladesh</h3>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <!-- balance -->
+                    <img src="./assets/coin.png" alt="">
+                    <h3 class="text-[#111111B3] opacity-70 font-semibold text-[18px]">
+                        <span id="balance">5500</span>
+                        <span>BDT</span>
+                    </h3>
+                </div>
+            </div>
+           </div>
+           <!-- Donation button and History Button -->
+            <div class="flex gap-4 justify-center sm:mt-12 mt-6 mb-6">
+                <!-- donation -->
+                <button id="donation" class="px-7 py-3 bg-[#B4F461] font-bold rounded-lg text-[17px]">Donation</button>
+                <!-- history -->
+                <button id="history" class="px-7 font-bold py-3 rounded-lg border-gray-500 border-opacity-30 border-2 box-border">History</button>
+            </div>
+      </div>
+    </header>
+    <main class="h-[1000px]">
+
+    </main>
+</body>
+
+</html>
